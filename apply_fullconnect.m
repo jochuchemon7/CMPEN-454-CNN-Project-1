@@ -20,10 +20,10 @@ function outarray = apply_fullconnect(inarray, filterbank, biasvals)
         for i = 1 : 4
             for j = 1 : 4
                 for k = 1 : 10
-                    output = output + filterbank(i, j, k, l) * inarray(i, j, k) + biasvals(l);
+                    output = output + filterbank(i, j, k, l) * inarray(i, j, k);
                 end
             end
         end
-        outarray(1, 1, l) = output;
+        outarray(1, 1, l) = output + biasvals(l);
     end
 end
