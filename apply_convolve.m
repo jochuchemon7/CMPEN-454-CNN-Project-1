@@ -21,6 +21,6 @@ function outarray = apply_convolve(inarray, filterbank, biasvals)
        % Add convolutuo result to outarray with bias values in place
        outarray(:, :, l) = output_sum + biasvals(l);
        % Reset summation array
-       output_sum(output_sum ~= 0) = 0.0;
+       output_sum = double(zeros(size(inarray, 1), size(inarray, 2)));
     end
 end
