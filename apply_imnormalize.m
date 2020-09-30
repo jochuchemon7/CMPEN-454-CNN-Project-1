@@ -7,5 +7,5 @@ Outputs: Array size NxMx3
 %}
 
 function outarray = apply_imnormalize(inarray)
-    outarray = inarray(:,:,:,1)/255.0 -.5;
+    outarray = inarray / 255.0 - 0.5;
 end

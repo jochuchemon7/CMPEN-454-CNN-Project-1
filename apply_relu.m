@@ -8,5 +8,5 @@ Outputs: Array size NxMxD
 %}
 
 function outarray = apply_relu(inarray)
-    outarray = max(inarray(:,:,:,1),0);
+    outarray = max(inarray, 0);
 end
